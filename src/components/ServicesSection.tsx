@@ -190,34 +190,88 @@ export default function ServicesSection({ openService, setOpenService }: Props) 
 
       {/* SCHEDULE */}
       <section id="schedule" className="py-20 px-6" style={{ background: "var(--med-light)" }}>
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <div className="section-reveal text-center mb-14">
             <p className="text-sm font-golos font-medium mb-3" style={{ color: "var(--med-teal)" }}>График работы</p>
             <h2 className="font-cormorant text-4xl md:text-5xl font-semibold" style={{ color: "var(--med-blue)" }}>Расписание приёмов</h2>
           </div>
-          <div className="section-reveal bg-white rounded-3xl overflow-hidden shadow-sm border border-[hsl(var(--border))]">
-            {schedule.map((item, i) => (
-              <div
-                key={i}
-                className={`flex items-center justify-between px-8 py-5 ${i !== schedule.length - 1 ? "border-b border-[hsl(var(--border))]" : ""} ${!item.available ? "opacity-50" : ""}`}
-              >
-                <div className="flex items-center gap-4">
-                  <div className={`w-2 h-2 rounded-full ${item.available ? "pulse-dot" : "bg-gray-300"}`} style={item.available ? { background: "var(--med-teal)" } : {}}></div>
-                  <span className="font-golos font-medium" style={{ color: "var(--med-blue)" }}>{item.day}</span>
+          <div className="grid md:grid-cols-2 gap-8 items-start">
+            {/* Таблица дней */}
+            <div className="section-reveal bg-white rounded-3xl overflow-hidden shadow-sm border border-[hsl(var(--border))]">
+              {schedule.map((item, i) => (
+                <div
+                  key={i}
+                  className={`flex items-center justify-between px-8 py-5 ${i !== schedule.length - 1 ? "border-b border-[hsl(var(--border))]" : ""} ${!item.available ? "opacity-40" : ""}`}
+                >
+                  <div className="flex items-center gap-4">
+                    <div className={`w-2 h-2 rounded-full ${item.available ? "pulse-dot" : "bg-gray-300"}`} style={item.available ? { background: "var(--med-teal)" } : {}}></div>
+                    <span className="font-golos font-medium" style={{ color: "var(--med-blue)" }}>{item.day}</span>
+                  </div>
+                  <span className="font-golos text-sm" style={{ color: item.available ? "var(--med-blue)" : "gray" }}>{item.time}</span>
                 </div>
-                <span className="font-golos text-sm" style={{ color: item.available ? "var(--med-blue)" : "gray" }}>{item.time}</span>
-                {item.available && (
-                  <a href="#booking" className="hidden sm:inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-xs font-golos font-medium text-white" style={{ background: "var(--med-teal)" }}>
-                    <Icon name="Plus" size={12} />
-                    Записаться
-                  </a>
-                )}
+              ))}
+            </div>
+
+            {/* ПроДокторов + запись */}
+            <div className="section-reveal flex flex-col gap-5">
+              {/* Виджет ПроДокторов */}
+              <a
+                href="https://prodoctorov.ru/moskva/vrach/720896-pyanyh/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block bg-white rounded-3xl p-7 border border-[hsl(var(--border))] shadow-sm hover:shadow-md transition-shadow group"
+              >
+                <div className="flex items-center justify-between mb-5">
+                  <div>
+                    <div className="font-golos text-xs text-gray-400 mb-1">Рейтинг на платформе</div>
+                    <div className="font-cormorant text-3xl font-semibold" style={{ color: "var(--med-blue)" }}>5.0</div>
+                  </div>
+                  <div className="w-12 h-12 rounded-2xl flex items-center justify-center" style={{ background: "var(--med-light)" }}>
+                    <Icon name="Star" size={22} style={{ color: "var(--med-teal)" }} />
+                  </div>
+                </div>
+                <div className="flex gap-1 mb-3">
+                  {[1,2,3,4,5].map(i => <span key={i} className="text-amber-400 text-lg">★</span>)}
+                </div>
+                <div className="font-golos text-xs text-gray-500 mb-5">Отзывы пациентов · ПроДокторов.ру</div>
+                <div
+                  className="w-full flex items-center justify-center gap-2 py-3 rounded-2xl font-golos font-medium text-sm text-white transition-opacity group-hover:opacity-90"
+                  style={{ background: "var(--med-blue)" }}
+                >
+                  <Icon name="ExternalLink" size={15} />
+                  Записаться на ПроДокторов
+                </div>
+              </a>
+
+              {/* Запись на сайте */}
+              <a
+                href="#booking"
+                className="block bg-white rounded-3xl p-7 border border-[hsl(var(--border))] shadow-sm hover:shadow-md transition-shadow group"
+              >
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="w-12 h-12 rounded-2xl flex items-center justify-center" style={{ background: "var(--med-light)" }}>
+                    <Icon name="CalendarPlus" size={22} style={{ color: "var(--med-teal)" }} />
+                  </div>
+                  <div>
+                    <div className="font-golos font-semibold text-sm" style={{ color: "var(--med-blue)" }}>Запись через сайт</div>
+                    <div className="font-golos text-xs text-gray-400">Ответ в течение 1 часа</div>
+                  </div>
+                </div>
+                <div
+                  className="w-full flex items-center justify-center gap-2 py-3 rounded-2xl font-golos font-medium text-sm text-white transition-opacity group-hover:opacity-90"
+                  style={{ background: "var(--med-teal)" }}
+                >
+                  <Icon name="Calendar" size={15} />
+                  Оставить заявку
+                </div>
+              </a>
+
+              {/* Адрес */}
+              <div className="p-4 rounded-2xl flex items-start gap-3" style={{ background: "rgba(42,157,143,0.08)", border: "1px solid rgba(42,157,143,0.2)" }}>
+                <Icon name="MapPin" size={16} style={{ color: "var(--med-teal)", marginTop: 2 }} />
+                <p className="text-sm font-golos text-gray-600">г. Москва, ул. Тверская, 24, офис 302. Парковка для пациентов — бесплатно.</p>
               </div>
-            ))}
-          </div>
-          <div className="section-reveal mt-6 p-4 rounded-2xl flex items-start gap-3" style={{ background: "rgba(42,157,143,0.08)", border: "1px solid rgba(42,157,143,0.2)" }}>
-            <Icon name="Info" size={16} style={{ color: "var(--med-teal)", marginTop: 2 }} />
-            <p className="text-sm font-golos text-gray-600">Адрес клиники: г. Москва, ул. Тверская, 24, офис 302. Парковка для пациентов — бесплатно.</p>
+            </div>
           </div>
         </div>
       </section>
