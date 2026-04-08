@@ -79,7 +79,7 @@ export default function Index() {
             <div className="w-8 h-8 rounded-full flex items-center justify-center" style={{ background: "var(--med-blue)" }}>
               <Icon name="Cross" size={14} className="text-white" />
             </div>
-            <span className="font-cormorant font-semibold text-lg" style={{ color: "var(--med-blue)" }}>Доктор Иванова</span>
+            <span className="font-cormorant font-semibold text-lg" style={{ color: "var(--med-blue)" }}>Доктор Пьяных</span>
           </div>
           <div className="hidden md:flex items-center gap-7 text-sm font-golos" style={{ color: "var(--med-blue)" }}>
             <a href="#services" className="hover:opacity-70 transition-opacity">Услуги</a>
@@ -108,8 +108,8 @@ export default function Index() {
               Ведёт приём · Записи доступны
             </div>
             <h1 className="font-cormorant text-5xl md:text-6xl font-semibold text-white leading-tight mb-4">
-              Мария Сергеевна<br />
-              <span style={{ color: "#7fe5d8" }}>Иванова</span>
+              Андрей Витальевич<br />
+              <span style={{ color: "#7fe5d8" }}>Пьяных</span>
             </h1>
             <p className="text-lg mb-2 font-golos" style={{ color: "rgba(255,255,255,0.75)" }}>Терапевт высшей категории</p>
             <p className="text-sm mb-8 font-golos" style={{ color: "rgba(255,255,255,0.55)" }}>Стаж 18 лет · КМН · Московский ГМУ</p>
@@ -361,7 +361,7 @@ export default function Index() {
                 <Icon name="CheckCircle" size={32} style={{ color: "var(--med-teal)" }} />
               </div>
               <h3 className="font-cormorant text-2xl font-semibold mb-2" style={{ color: "var(--med-blue)" }}>Заявка принята!</h3>
-              <p className="font-golos text-sm text-gray-500">Мы свяжемся с вами в ближайшее время для подтверждения записи.</p>
+              <p className="font-golos text-sm text-gray-500">Андрей Витальевич свяжется с вами в ближайшее время для подтверждения записи.</p>
             </div>
           ) : (
             <div className="section-reveal bg-white rounded-3xl p-8 md:p-10 border border-[hsl(var(--border))] shadow-sm">
@@ -449,7 +449,7 @@ export default function Index() {
                 <div className="w-8 h-8 rounded-full flex items-center justify-center" style={{ background: "rgba(42,157,143,0.3)" }}>
                   <Icon name="Cross" size={14} className="text-white" />
                 </div>
-                <span className="font-cormorant font-semibold text-lg text-white">Доктор Иванова</span>
+                <span className="font-cormorant font-semibold text-lg text-white">Доктор Пьяных</span>
               </div>
               <p className="text-xs font-golos leading-relaxed" style={{ color: "rgba(255,255,255,0.5)" }}>Терапевт высшей категории. Профессиональная медицинская помощь в Москве и онлайн.</p>
             </div>
