@@ -145,7 +145,7 @@ export default function BookingSection({ bookingForm, setBookingForm, submitted,
                 {[
                   { icon: "Phone", text: "+7 (495) 123-45-67" },
                   { icon: "Mail", text: "ivanova@clinic.ru" },
-                  { icon: "MapPin", text: "Москва, ул. Тверская, 24" },
+                  { icon: "MapPin", text: "Москва, Мичуринский проспект, 31" },
                 ].map((c) => (
                   <div key={c.text} className="flex items-center gap-2">
                     <Icon name={c.icon} size={14} style={{ color: "rgba(127,229,216,0.7)" }} />
