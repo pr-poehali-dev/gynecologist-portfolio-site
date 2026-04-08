@@ -126,7 +126,7 @@ export default function Index() {
             </div>
 
             <div className="flex items-center gap-8 mt-10 pt-8" style={{ borderTop: "1px solid rgba(255,255,255,0.1)" }}>
-              {[["18+", "лет опыта"], ["2 400+", "пациентов"], ["4.9", "рейтинг"]].map(([num, label]) => (
+              {[["10+", "лет опыта"], ["2 400+", "пациентов"], ["5.0", "рейтинг"]].map(([num, label]) => (
                 <div key={label}>
                   <div className="font-cormorant text-3xl font-semibold text-white">{num}</div>
                   <div className="text-xs font-golos" style={{ color: "rgba(255,255,255,0.5)" }}>{label}</div>
@@ -155,14 +155,14 @@ export default function Index() {
                   </div>
                 </div>
               </div>
-              <div className="absolute -top-4 -right-4 bg-white rounded-2xl p-3 shadow-xl">
+              <a href="https://prodoctorov.ru/moskva/vrach/720896-pyanyh/" target="_blank" rel="noopener noreferrer" className="absolute -top-4 -right-4 bg-white rounded-2xl p-3 shadow-xl hover:shadow-2xl transition-shadow">
                 <div className="text-center">
                   <div className="flex justify-center gap-0.5 mb-1">
                     {[1,2,3,4,5].map(i => <span key={i} className="text-amber-400 text-sm">★</span>)}
                   </div>
-                  <div className="text-xs font-golos text-gray-500">4.9 / 5.0</div>
+                  <div className="text-xs font-golos text-gray-500">5.0 · ПроДокторов</div>
                 </div>
-              </div>
+              </a>
             </div>
           </div>
         </div>
