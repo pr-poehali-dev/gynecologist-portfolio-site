@@ -76,10 +76,10 @@ export default function Index() {
       <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-[hsl(var(--border))]">
         <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-full flex items-center justify-center" style={{ background: "var(--med-blue)" }}>
-              <Icon name="Cross" size={14} className="text-white" />
+            <div className="flex flex-col leading-none">
+              <span className="font-golos text-[10px] font-medium tracking-widest uppercase" style={{ color: "var(--med-teal)" }}>Women's Doc</span>
+              <span className="font-cormorant font-semibold text-lg" style={{ color: "var(--med-blue)" }}>Пьяных Андрей</span>
             </div>
-            <span className="font-cormorant font-semibold text-lg" style={{ color: "var(--med-blue)" }}>Доктор Пьяных</span>
           </div>
           <div className="hidden md:flex items-center gap-7 text-sm font-golos" style={{ color: "var(--med-blue)" }}>
             <a href="#services" className="hover:opacity-70 transition-opacity">Услуги</a>
