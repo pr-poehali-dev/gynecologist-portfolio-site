@@ -107,7 +107,7 @@ export default function Index() {
               <span className="w-1.5 h-1.5 rounded-full pulse-dot" style={{ background: "#2a9d8f" }}></span>
               Ведёт приём · Записи доступны
             </div>
-            <h1 className="font-cormorant text-5xl md:text-6xl font-semibold text-white leading-tight mb-4">
+            <h1 className="font-cormorant text-5xl md:text-6xl font-semibold text-white leading-tight mb-4 inline-block px-5 py-2 rounded-xl" style={{ border: "2px solid #000", background: "rgba(0,0,0,0.15)" }}>
               Андрей Витальевич<br />
               <span style={{ color: "#7fe5d8" }}>Пьяных</span>
             </h1>
