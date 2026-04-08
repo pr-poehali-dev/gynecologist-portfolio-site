@@ -111,14 +111,8 @@ export default function Index() {
               Андрей Витальевич<br />
               <span style={{ color: "#7fe5d8" }}>Пьяных</span>
             </h1>
-            <p className="text-lg mb-2 font-golos" style={{ color: "rgba(255,255,255,0.75)" }}>Терапевт высшей категории</p>
-            <p className="text-sm mb-8 font-golos" style={{ color: "rgba(255,255,255,0.55)" }}>Стаж 18 лет · КМН · Московский ГМУ</p>
-
-            <div className="flex flex-wrap gap-3 mb-10">
-              {["Кардиология", "Гастроэнтерология", "Эндокринология"].map((s) => (
-                <span key={s} className="px-3 py-1 rounded-full text-xs font-golos" style={{ background: "rgba(255,255,255,0.1)", color: "rgba(255,255,255,0.8)", border: "1px solid rgba(255,255,255,0.15)" }}>{s}</span>
-              ))}
-            </div>
+            <p className="text-lg mb-2 font-golos" style={{ color: "rgba(255,255,255,0.75)" }}>Оперирующий гинеколог</p>
+            <p className="text-sm mb-8 font-golos" style={{ color: "rgba(255,255,255,0.55)" }}>Стаж более 10 лет · 1-я квалификационная категория</p>
 
             <div className="flex flex-wrap gap-4">
               <a href="#booking" className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full font-golos font-medium text-white transition-all hover:scale-105" style={{ background: "var(--med-teal)" }}>
