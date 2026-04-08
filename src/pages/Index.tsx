@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Icon from "@/components/ui/icon";
 
-const DOCTOR_IMAGE = "https://cdn.poehali.dev/projects/6f258bde-571d-44af-a64c-a663f716c3bf/files/4d738b38-6062-4e2d-9f02-b24f3b9baf25.jpg";
+const DOCTOR_IMAGE = "https://cdn.poehali.dev/projects/6f258bde-571d-44af-a64c-a663f716c3bf/bucket/4f0647a4-24db-4ff3-988f-91a982cfd3b1.png";
 
 const schedule = [
   { day: "Понедельник", time: "09:00 – 14:00", available: true },
