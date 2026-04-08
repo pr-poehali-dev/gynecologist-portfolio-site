@@ -100,7 +100,7 @@ export default function Index() {
       </nav>
 
       {/* HERO */}
-      <section className="pt-16 min-h-screen flex items-center" style={{ background: "linear-gradient(135deg, #1a3a5c 0%, #1a5276 60%, #1a6b7c 100%)" }}>
+      <section className="pt-16 min-h-screen flex items-center" style={{ background: "linear-gradient(135deg, #0d5f63 0%, #0d7377 60%, #14a8a3 100%)" }}>
         <div className="max-w-6xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-12 items-center">
           <div className="animate-fade-up">
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-golos font-medium mb-6" style={{ background: "rgba(42,157,143,0.2)", color: "#7fe5d8" }}>
@@ -227,7 +227,7 @@ export default function Index() {
       {/* ONLINE CONSULTATION */}
       <section id="online" className="py-20 px-6">
         <div className="max-w-6xl mx-auto">
-          <div className="section-reveal rounded-3xl overflow-hidden" style={{ background: "linear-gradient(135deg, #1a3a5c 0%, #1a6b7c 100%)" }}>
+          <div className="section-reveal rounded-3xl overflow-hidden" style={{ background: "linear-gradient(135deg, #0d5f63 0%, #14a8a3 100%)" }}>
             <div className="grid md:grid-cols-2 gap-0">
               <div className="p-12 md:p-16">
                 <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-golos font-medium mb-6" style={{ background: "rgba(42,157,143,0.2)", color: "#7fe5d8" }}>
