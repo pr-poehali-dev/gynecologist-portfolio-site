@@ -23,9 +23,11 @@ export default function HeroSection() {
             <a href="#reviews" className="hover:opacity-70 transition-opacity">Отзывы</a>
           </div>
           <a
-            href="#booking"
+            href="https://prodoctorov.ru/moskva/vrach/720896-pyanyh/"
+            target="_blank"
+            rel="noopener noreferrer"
             className="hidden md:inline-flex items-center gap-2 px-5 py-2 rounded-full text-sm font-golos font-medium text-white transition-opacity hover:opacity-90"
-            style={{ background: "var(--med-blue)" }}
+            style={{ background: "#dc2626" }}
           >
             <Icon name="Calendar" size={15} />
             Записаться
@@ -49,7 +51,7 @@ export default function HeroSection() {
             <p className="text-sm mb-8 font-golos" style={{ color: "rgba(255,255,255,0.55)" }}>Стаж более 10 лет · 1-я квалификационная категория</p>
 
             <div className="flex flex-wrap gap-4">
-              <a href="#booking" className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full font-golos font-medium text-white transition-all hover:scale-105" style={{ background: "var(--med-teal)" }}>
+              <a href="https://prodoctorov.ru/moskva/vrach/720896-pyanyh/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full font-golos font-medium text-white transition-all hover:scale-105" style={{ background: "#dc2626" }}>
                 <Icon name="CalendarPlus" size={18} />
                 Записаться на приём
               </a>

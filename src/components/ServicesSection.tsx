@@ -172,7 +172,7 @@ export default function ServicesSection({ openService, setOpenService }: Props) 
                         </div>
                       ))}
                     </div>
-                    <a href="#booking" className="inline-flex items-center gap-2 px-5 py-2 rounded-full text-xs font-golos font-medium text-white" style={{ background: "var(--med-blue)" }}>
+                    <a href="https://prodoctorov.ru/moskva/vrach/720896-pyanyh/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-5 py-2 rounded-full text-xs font-golos font-medium text-white" style={{ background: "#dc2626" }}>
                       <Icon name="CalendarPlus" size={13} />
                       Записаться
                     </a>
@@ -259,26 +259,28 @@ export default function ServicesSection({ openService, setOpenService }: Props) 
                 </div>
               </a>
 
-              {/* Запись на сайте */}
+              {/* Запись через ПроДокторов */}
               <a
-                href="#booking"
+                href="https://prodoctorov.ru/moskva/vrach/720896-pyanyh/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="block bg-white rounded-3xl p-7 border border-[hsl(var(--border))] shadow-sm hover:shadow-md transition-shadow group"
               >
                 <div className="flex items-center gap-4 mb-4">
-                  <div className="w-12 h-12 rounded-2xl flex items-center justify-center" style={{ background: "var(--med-light)" }}>
-                    <Icon name="CalendarPlus" size={22} style={{ color: "var(--med-teal)" }} />
+                  <div className="w-12 h-12 rounded-2xl flex items-center justify-center" style={{ background: "#fef2f2" }}>
+                    <Icon name="CalendarPlus" size={22} style={{ color: "#dc2626" }} />
                   </div>
                   <div>
-                    <div className="font-golos font-semibold text-sm" style={{ color: "var(--med-blue)" }}>Запись через сайт</div>
-                    <div className="font-golos text-xs text-gray-400">Ответ в течение 1 часа</div>
+                    <div className="font-golos font-semibold text-sm" style={{ color: "var(--med-blue)" }}>Запись через ПроДокторов</div>
+                    <div className="font-golos text-xs text-gray-400">Онлайн · быстро и удобно</div>
                   </div>
                 </div>
                 <div
                   className="w-full flex items-center justify-center gap-2 py-3 rounded-2xl font-golos font-medium text-sm text-white transition-opacity group-hover:opacity-90"
-                  style={{ background: "var(--med-teal)" }}
+                  style={{ background: "#dc2626" }}
                 >
                   <Icon name="Calendar" size={15} />
-                  Оставить заявку
+                  Записаться на приём
                 </div>
               </a>
             </div>
@@ -313,7 +315,7 @@ export default function ServicesSection({ openService, setOpenService }: Props) 
                     </div>
                   ))}
                 </div>
-                <a href="#booking" className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full font-golos font-medium text-white transition-all hover:scale-105" style={{ background: "var(--med-teal)" }}>
+                <a href="https://prodoctorov.ru/moskva/vrach/720896-pyanyh/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full font-golos font-medium text-white transition-all hover:scale-105" style={{ background: "#dc2626" }}>
                   <Icon name="Video" size={16} />
                   Записаться онлайн
                 </a>
