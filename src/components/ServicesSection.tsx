@@ -196,20 +196,36 @@ export default function ServicesSection({ openService, setOpenService }: Props) 
             <h2 className="font-cormorant text-4xl md:text-5xl font-semibold" style={{ color: "var(--med-blue)" }}>Расписание приёмов</h2>
           </div>
           <div className="grid md:grid-cols-2 gap-8 items-start">
-            {/* Таблица дней */}
-            <div className="section-reveal bg-white rounded-3xl overflow-hidden shadow-sm border border-[hsl(var(--border))]">
-              {schedule.map((item, i) => (
-                <div
-                  key={i}
-                  className={`flex items-center justify-between px-8 py-5 ${i !== schedule.length - 1 ? "border-b border-[hsl(var(--border))]" : ""} ${!item.available ? "opacity-40" : ""}`}
-                >
-                  <div className="flex items-center gap-4">
-                    <div className={`w-2 h-2 rounded-full ${item.available ? "pulse-dot" : "bg-gray-300"}`} style={item.available ? { background: "var(--med-teal)" } : {}}></div>
-                    <span className="font-golos font-medium" style={{ color: "var(--med-blue)" }}>{item.day}</span>
-                  </div>
-                  <span className="font-golos text-sm" style={{ color: item.available ? "var(--med-blue)" : "gray" }}>{item.time}</span>
+            {/* Яндекс карта */}
+            <div className="section-reveal flex flex-col gap-4">
+              <div className="rounded-3xl overflow-hidden border border-[hsl(var(--border))] shadow-sm" style={{ height: 380 }}>
+                <iframe
+                  src="https://yandex.ru/map-widget/v1/?ll=37.497836%2C55.696078&z=16&pt=37.497836%2C55.696078%2Cpm2rdm&rtext=~55.696078%2C37.497836&rtt=auto&lang=ru_RU"
+                  width="100%"
+                  height="100%"
+                  frameBorder="0"
+                  allowFullScreen
+                  title="Клинический госпиталь Мать и дитя Мичуринский"
+                  style={{ border: "none" }}
+                />
+              </div>
+              <a
+                href="https://yandex.ru/maps/?rtext=~55.696078,37.497836&rtt=auto"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-2 py-3 rounded-2xl font-golos font-medium text-sm transition-opacity hover:opacity-80"
+                style={{ background: "rgba(42,157,143,0.1)", color: "var(--med-teal)", border: "1px solid rgba(42,157,143,0.25)" }}
+              >
+                <Icon name="Navigation" size={15} />
+                Построить маршрут
+              </a>
+              <div className="p-4 rounded-2xl flex items-start gap-3" style={{ background: "rgba(42,157,143,0.08)", border: "1px solid rgba(42,157,143,0.2)" }}>
+                <Icon name="MapPin" size={16} style={{ color: "var(--med-teal)", marginTop: 2 }} />
+                <div>
+                  <p className="text-sm font-golos font-medium mb-0.5" style={{ color: "var(--med-blue)" }}>Клинический госпиталь «Мать и дитя»</p>
+                  <p className="text-xs font-golos text-gray-500">Мичуринский проспект, 31, Москва</p>
                 </div>
-              ))}
+              </div>
             </div>
 
             {/* ПроДокторов + запись */}
@@ -265,12 +281,6 @@ export default function ServicesSection({ openService, setOpenService }: Props) 
                   Оставить заявку
                 </div>
               </a>
-
-              {/* Адрес */}
-              <div className="p-4 rounded-2xl flex items-start gap-3" style={{ background: "rgba(42,157,143,0.08)", border: "1px solid rgba(42,157,143,0.2)" }}>
-                <Icon name="MapPin" size={16} style={{ color: "var(--med-teal)", marginTop: 2 }} />
-                <p className="text-sm font-golos text-gray-600">г. Москва, ул. Тверская, 24, офис 302. Парковка для пациентов — бесплатно.</p>
-              </div>
             </div>
           </div>
         </div>
