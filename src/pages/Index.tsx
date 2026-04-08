@@ -434,6 +434,16 @@ export default function Index() {
         </div>
       </section>
 
+      {/* DISCLAIMER */}
+      <div className="px-6 py-5" style={{ background: "#f5f5f0", borderTop: "1px solid #e0e0d8" }}>
+        <div className="max-w-6xl mx-auto flex items-start gap-3">
+          <Icon name="AlertCircle" size={16} className="flex-shrink-0 mt-0.5 text-gray-400" />
+          <p className="text-xs font-golos leading-relaxed text-gray-500">
+            <span className="font-medium text-gray-600">Важно:</span> Информация на сайте носит ознакомительный характер и не заменяет очный приём и индивидуальную консультацию специалиста. Лечение назначается только после личного осмотра и/или необходимых исследований. Сайт не содержит гарантий лечебного результата.
+          </p>
+        </div>
+      </div>
+
       {/* FOOTER */}
       <footer className="py-10 px-6" style={{ background: "var(--med-blue)" }}>
         <div className="max-w-6xl mx-auto">
