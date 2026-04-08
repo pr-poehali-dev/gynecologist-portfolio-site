@@ -15,6 +15,7 @@ export default function HeroSection() {
             </div>
           </div>
           <div className="hidden md:flex items-center gap-7 text-sm font-golos" style={{ color: "var(--med-blue)" }}>
+            <a href="#about" className="hover:opacity-70 transition-opacity">Обо мне</a>
             <a href="#services" className="hover:opacity-70 transition-opacity">Услуги</a>
             <a href="#schedule" className="hover:opacity-70 transition-opacity">Расписание</a>
             <a href="#online" className="hover:opacity-70 transition-opacity">Онлайн</a>

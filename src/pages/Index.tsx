@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import HeroSection from "@/components/HeroSection";
+import AboutSection from "@/components/AboutSection";
 import ServicesSection from "@/components/ServicesSection";
 import ReviewsSection from "@/components/ReviewsSection";
 import BookingSection from "@/components/BookingSection";
@@ -31,6 +32,7 @@ export default function Index() {
   return (
     <div className="min-h-screen" style={{ background: "var(--med-cream)" }}>
       <HeroSection />
+      <AboutSection />
       <ServicesSection openService={openService} setOpenService={setOpenService} />
       <ReviewsSection openFaq={openFaq} setOpenFaq={setOpenFaq} />
       <BookingSection
