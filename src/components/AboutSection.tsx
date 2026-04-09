@@ -26,22 +26,6 @@ export default function AboutSection() {
           <h2 className="font-cormorant text-4xl md:text-5xl font-semibold" style={{ color: "var(--med-blue)" }}>Обо мне</h2>
         </div>
 
-        {/* Фото */}
-        <div className="section-reveal flex justify-center mb-12">
-          <div className="relative">
-            <div className="w-56 h-56 md:w-72 md:h-72 rounded-3xl overflow-hidden shadow-xl border-4 border-white" style={{ boxShadow: "0 20px 60px rgba(13,95,99,0.18)" }}>
-              <img
-                src="https://cdn.poehali.dev/projects/6f258bde-571d-44af-a64c-a663f716c3bf/files/5277a953-773c-4481-844c-7ffb68b22637.jpg"
-                alt="Доктор Пьяных Андрей Витальевич"
-                className="w-full h-full object-cover object-top"
-              />
-            </div>
-            <div className="absolute -bottom-4 -right-4 bg-white rounded-2xl px-4 py-2 shadow-md border border-[hsl(var(--border))]">
-              <div className="font-golos text-xs font-semibold" style={{ color: "var(--med-blue)" }}>Андрей Витальевич</div>
-              <div className="font-golos text-xs text-gray-400">Гинеколог · I категория</div>
-            </div>
-          </div>
-        </div>
 
         <div className="grid md:grid-cols-2 gap-12 items-start">
           {/* Timeline */}
