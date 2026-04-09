@@ -133,9 +133,10 @@ const services = [
 interface Props {
   openService: number | null;
   setOpenService: (i: number | null) => void;
+  onBookOnline?: () => void;
 }
 
-export default function ServicesSection({ openService, setOpenService }: Props) {
+export default function ServicesSection({ openService, setOpenService, onBookOnline }: Props) {
   return (
     <>
       {/* SERVICES */}
@@ -315,10 +316,10 @@ export default function ServicesSection({ openService, setOpenService }: Props) 
                     </div>
                   ))}
                 </div>
-                <a href="https://prodoctorov.ru/moskva/vrach/720896-pyanyh/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full font-golos font-medium text-white transition-all hover:scale-105" style={{ background: "#dc2626" }}>
+                <button onClick={onBookOnline} className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full font-golos font-medium text-white transition-all hover:scale-105" style={{ background: "#dc2626" }}>
                   <Icon name="Video" size={16} />
                   Записаться онлайн
-                </a>
+                </button>
               </div>
               <div className="p-12 md:p-16 flex flex-col justify-center" style={{ background: "rgba(255,255,255,0.04)", borderLeft: "1px solid rgba(255,255,255,0.08)" }}>
                 <h3 className="font-cormorant text-2xl font-semibold text-white mb-6">Как это работает?</h3>

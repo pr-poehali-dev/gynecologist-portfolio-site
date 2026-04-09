@@ -29,11 +29,16 @@ export default function Index() {
     setSubmitted(true);
   }
 
+  function handleBookOnline() {
+    setBookingForm((prev) => ({ ...prev, type: "online" }));
+    document.getElementById("booking")?.scrollIntoView({ behavior: "smooth" });
+  }
+
   return (
     <div className="min-h-screen" style={{ background: "var(--med-cream)" }}>
       <HeroSection />
       <AboutSection />
-      <ServicesSection openService={openService} setOpenService={setOpenService} />
+      <ServicesSection openService={openService} setOpenService={setOpenService} onBookOnline={handleBookOnline} />
       <ReviewsSection openFaq={openFaq} setOpenFaq={setOpenFaq} />
       <BookingSection
         bookingForm={bookingForm}
