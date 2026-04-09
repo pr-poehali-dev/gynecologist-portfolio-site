@@ -1,13 +1,13 @@
 import Icon from "@/components/ui/icon";
 
 const schedule = [
-  { day: "Понедельник", time: "09:00 – 14:00", available: true },
-  { day: "Вторник", time: "14:00 – 19:00", available: true },
-  { day: "Среда", time: "09:00 – 14:00", available: true },
-  { day: "Четверг", time: "Выходной", available: false },
-  { day: "Пятница", time: "09:00 – 17:00", available: true },
-  { day: "Суббота", time: "10:00 – 14:00", available: true },
-  { day: "Воскресенье", time: "Выходной", available: false },
+  { day: "Понедельник", time: "Уточнять в расписании", available: true },
+  { day: "Вторник", time: "Уточнять в расписании", available: true },
+  { day: "Среда", time: "Уточнять в расписании", available: true },
+  { day: "Четверг", time: "Уточнять в расписании", available: true },
+  { day: "Пятница", time: "Уточнять в расписании", available: true },
+  { day: "Суббота", time: "Уточнять в расписании", available: true },
+  { day: "Воскресенье", time: "Уточнять в расписании", available: true },
 ];
 
 const services = [
@@ -195,6 +195,10 @@ export default function ServicesSection({ openService, setOpenService, onBookOnl
           <div className="section-reveal text-center mb-14">
             <p className="text-sm font-golos font-medium mb-3" style={{ color: "var(--med-teal)" }}>График работы</p>
             <h2 className="font-cormorant text-4xl md:text-5xl font-semibold" style={{ color: "var(--med-blue)" }}>Расписание приёмов</h2>
+            <div className="inline-flex items-center gap-2 mt-4 px-4 py-2 rounded-full font-golos text-sm font-medium text-white" style={{ background: "var(--med-teal)" }}>
+              <Icon name="Clock" size={15} />
+              Режим работы 24/7 — приёмы уточняйте в расписании
+            </div>
           </div>
           <div className="grid md:grid-cols-2 gap-8 items-start">
             {/* Яндекс карта */}
