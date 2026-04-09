@@ -1,0 +1,21 @@
+{
+  "tests": [
+    {
+      "name": "GET reviews list",
+      "method": "GET",
+      "path": "/",
+      "expectedStatus": 200,
+      "expectedBody": [],
+      "bodyMatcher": "partial"
+    },
+    {
+      "name": "POST new review",
+      "method": "POST",
+      "path": "/",
+      "body": {"name": "Тест Тестов", "stars": 5, "text": "Отличный врач, всё понравилось!"},
+      "expectedStatus": 201,
+      "expectedBody": {"message": "Отзыв отправлен на модерацию"},
+      "bodyMatcher": "partial"
+    }
+  ]
+}

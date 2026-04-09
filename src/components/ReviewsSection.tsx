@@ -1,7 +1,7 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Icon from "@/components/ui/icon";
 
-const reviews: { name: string; stars: number; text: string; date: string }[] = [];
+const REVIEWS_URL = "https://functions.poehali.dev/da0246ef-4438-401e-82f6-1ff3a33bd7b8";
 
 const faq = [
   { q: "Как записаться на приём?", a: "Вы можете записаться через форму на сайте, по телефону или через мессенджер. Подтверждение придёт в течение 1 часа в рабочее время." },
@@ -22,13 +22,22 @@ function StarRating({ count }: { count: number }) {
   );
 }
 
-function ReviewForm() {
+function ReviewForm({ onSent }: { onSent: () => void }) {
   const [form, setForm] = useState({ name: "", stars: 5, text: "" });
   const [sent, setSent] = useState(false);
+  const [loading, setLoading] = useState(false);
 
-  function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
+    setLoading(true);
+    await fetch(REVIEWS_URL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(form),
+    });
+    setLoading(false);
     setSent(true);
+    onSent();
   }
 
   return (
@@ -98,7 +107,7 @@ function ReviewForm() {
             style={{ background: "var(--med-blue)" }}
           >
             <Icon name="Send" size={15} />
-            Отправить отзыв
+            {loading ? "Отправляю..." : "Отправить отзыв"}
           </button>
           <p className="text-center text-xs font-golos text-gray-400">Нажимая кнопку, вы соглашаетесь с обработкой персональных данных</p>
         </form>
@@ -115,6 +124,15 @@ interface Props {
 export default function ReviewsSection({ openFaq, setOpenFaq }: Props) {
   const [question, setQuestion] = useState({ name: "", question: "" });
   const [questionSent, setQuestionSent] = useState(false);
+  const [reviews, setReviews] = useState<{ id: number; name: string; stars: number; text: string; date: string }[]>([]);
+
+  async function loadReviews() {
+    const res = await fetch(REVIEWS_URL);
+    const data = await res.json();
+    setReviews(data);
+  }
+
+  useEffect(() => { loadReviews(); }, []);
 
   function handleQuestion(e: React.FormEvent) {
     e.preventDefault();
@@ -242,7 +260,7 @@ export default function ReviewsSection({ openFaq, setOpenFaq }: Props) {
           )}
 
           {/* Форма отзыва */}
-          <ReviewForm />
+          <ReviewForm onSent={loadReviews} />
         </div>
       </section>
     </>

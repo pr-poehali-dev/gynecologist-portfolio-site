@@ -1,0 +1,8 @@
+CREATE TABLE reviews (
+  id SERIAL PRIMARY KEY,
+  name TEXT NOT NULL,
+  stars INTEGER NOT NULL CHECK (stars BETWEEN 1 AND 5),
+  text TEXT NOT NULL,
+  created_at TIMESTAMPTZ DEFAULT NOW(),
+  approved BOOLEAN DEFAULT FALSE
+);
