@@ -137,14 +137,14 @@ export default function BookingSection({ bookingForm, setBookingForm, submitted,
                 </div>
                 <span className="font-cormorant font-semibold text-lg text-white">Доктор Пьяных</span>
               </div>
-              <p className="text-xs font-golos leading-relaxed" style={{ color: "rgba(255,255,255,0.5)" }}>Терапевт высшей категории. Профессиональная медицинская помощь в Москве и онлайн.</p>
+              <p className="text-xs font-golos leading-relaxed" style={{ color: "rgba(255,255,255,0.5)" }}>Гинеколог-хирург, детский гинеколог, врач УЗИ. Профессиональная медицинская помощь в Москве и онлайн.</p>
             </div>
             <div>
               <h4 className="font-golos font-medium text-sm text-white mb-4">Контакты</h4>
               <div className="space-y-2">
                 {[
                   { icon: "Phone", text: "+7 (495) 123-45-67" },
-                  { icon: "Mail", text: "ivanova@clinic.ru" },
+                  { icon: "Mail", text: "avpyanykhdok@yandex.ru" },
                   { icon: "MapPin", text: "Москва, Мичуринский проспект, 31" },
                 ].map((c) => (
                   <div key={c.text} className="flex items-center gap-2">

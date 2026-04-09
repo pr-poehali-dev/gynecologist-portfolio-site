@@ -86,7 +86,7 @@ export default function HeroSection() {
                     <Icon name="Award" size={18} style={{ color: "var(--med-teal)" }} />
                   </div>
                   <div>
-                    <div className="text-xs font-golos font-medium" style={{ color: "var(--med-blue)" }}>Оперирующий гинеколог</div>
+                    <div className="text-xs font-golos font-medium" style={{ color: "var(--med-blue)" }}>Гинеколог-хирург · Детский гинеколог · Врач УЗИ</div>
                     <div className="text-xs font-golos text-gray-400">1-я квалификационная категория</div>
                   </div>
                 </div>
