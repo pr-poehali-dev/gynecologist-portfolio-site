@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Icon from "@/components/ui/icon";
 
 const reviews = [
@@ -31,6 +32,14 @@ interface Props {
 }
 
 export default function ReviewsSection({ openFaq, setOpenFaq }: Props) {
+  const [question, setQuestion] = useState({ name: "", question: "" });
+  const [questionSent, setQuestionSent] = useState(false);
+
+  function handleQuestion(e: React.FormEvent) {
+    e.preventDefault();
+    setQuestionSent(true);
+  }
+
   return (
     <>
       {/* FAQ */}
@@ -62,6 +71,63 @@ export default function ReviewsSection({ openFaq, setOpenFaq }: Props) {
                 )}
               </div>
             ))}
+          </div>
+
+          {/* Форма вопроса */}
+          <div className="section-reveal mt-10 bg-white rounded-3xl border border-[hsl(var(--border))] overflow-hidden shadow-sm">
+            <div className="px-8 pt-8 pb-2">
+              <div className="flex items-center gap-3 mb-1">
+                <div className="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0" style={{ background: "rgba(42,157,143,0.1)" }}>
+                  <Icon name="MessageCircleQuestion" size={18} style={{ color: "var(--med-teal)" }} />
+                </div>
+                <h3 className="font-cormorant text-2xl font-semibold" style={{ color: "var(--med-blue)" }}>Задайте свой вопрос</h3>
+              </div>
+              <p className="font-golos text-xs text-gray-400 mb-6 ml-12">Не нашли ответ? Спросите напрямую — отвечу лично</p>
+            </div>
+
+            {questionSent ? (
+              <div className="px-8 pb-8 text-center">
+                <div className="w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4" style={{ background: "rgba(42,157,143,0.1)" }}>
+                  <Icon name="CheckCircle" size={24} style={{ color: "var(--med-teal)" }} />
+                </div>
+                <p className="font-golos font-medium text-sm" style={{ color: "var(--med-blue)" }}>Вопрос получен!</p>
+                <p className="font-golos text-xs text-gray-400 mt-1">Постараюсь ответить в ближайшее время</p>
+              </div>
+            ) : (
+              <form onSubmit={handleQuestion} className="px-8 pb-8 space-y-4">
+                <div>
+                  <label className="block text-xs font-golos font-medium mb-1.5 text-gray-500">Ваше имя</label>
+                  <input
+                    value={question.name}
+                    onChange={(e) => setQuestion({ ...question, name: e.target.value })}
+                    placeholder="Как к вам обращаться?"
+                    className="w-full px-4 py-3 rounded-xl text-sm font-golos border outline-none focus:ring-2 transition-all"
+                    style={{ borderColor: "hsl(var(--border))", background: "var(--med-cream)" }}
+                  />
+                </div>
+                <div>
+                  <label className="block text-xs font-golos font-medium mb-1.5 text-gray-500">Ваш вопрос *</label>
+                  <textarea
+                    required
+                    value={question.question}
+                    onChange={(e) => setQuestion({ ...question, question: e.target.value })}
+                    rows={3}
+                    placeholder="Напишите вопрос, который вас интересует..."
+                    className="w-full px-4 py-3 rounded-xl text-sm font-golos border outline-none focus:ring-2 transition-all resize-none"
+                    style={{ borderColor: "hsl(var(--border))", background: "var(--med-cream)" }}
+                  />
+                </div>
+                <button
+                  type="submit"
+                  className="w-full py-3.5 rounded-xl font-golos font-medium text-white text-sm transition-all hover:opacity-90 flex items-center justify-center gap-2"
+                  style={{ background: "var(--med-teal)" }}
+                >
+                  <Icon name="Send" size={15} />
+                  Отправить вопрос
+                </button>
+                <p className="text-center text-xs font-golos text-gray-400">Ответ придёт лично — публично не публикуется</p>
+              </form>
+            )}
           </div>
         </div>
       </section>
