@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
 import ServicesSection from "@/components/ServicesSection";
-import ReviewsSection from "@/components/ReviewsSection";
 import BookingSection from "@/components/BookingSection";
 
 function useScrollReveal() {
@@ -39,7 +38,6 @@ export default function Index() {
       <HeroSection />
       <AboutSection />
       <ServicesSection openService={openService} setOpenService={setOpenService} onBookOnline={handleBookOnline} />
-      <ReviewsSection openFaq={openFaq} setOpenFaq={setOpenFaq} />
       <BookingSection
         bookingForm={bookingForm}
         setBookingForm={setBookingForm}
