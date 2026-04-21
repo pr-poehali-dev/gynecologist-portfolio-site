@@ -105,7 +105,12 @@ export default function BookingSection({ bookingForm, setBookingForm, submitted,
                   <Icon name="Send" size={16} />
                   Отправить заявку
                 </button>
-                <p className="text-center text-xs font-golos text-gray-400">Нажимая кнопку, вы соглашаетесь с обработкой персональных данных</p>
+                <p className="text-center text-xs font-golos text-gray-400">
+                  Нажимая кнопку, вы соглашаетесь с{" "}
+                  <a href="/privacy" target="_blank" rel="noopener noreferrer" className="underline hover:opacity-70 transition-opacity" style={{ color: "var(--med-teal)" }}>
+                    политикой обработки персональных данных
+                  </a>
+                </p>
                 <div className="flex items-start gap-2 p-3 rounded-xl mt-1" style={{ background: "#f5f5f0" }}>
                   <Icon name="AlertCircle" size={13} className="flex-shrink-0 mt-0.5 text-gray-400" />
                   <p className="text-xs font-golos leading-relaxed text-gray-400">Информация не заменяет очный приём и индивидуальную консультацию. Лечение назначается после личного осмотра и/или необходимых исследований.</p>
