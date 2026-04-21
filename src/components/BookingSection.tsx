@@ -163,10 +163,7 @@ export default function BookingSection({ bookingForm, setBookingForm, submitted,
               </div>
             </div>
           </div>
-          <div className="pt-6 flex items-center justify-between" style={{ borderTop: "1px solid rgba(255,255,255,0.1)" }}>
-            <p className="text-xs font-golos" style={{ color: "rgba(255,255,255,0.3)" }}>© 2026 Доктор Иванова. Все права защищены.</p>
-            <p className="text-xs font-golos" style={{ color: "rgba(255,255,255,0.3)" }}>Лицензия МЗ РФ № ЛО-77-01-018594</p>
-          </div>
+
         </div>
       </footer>
     </>
